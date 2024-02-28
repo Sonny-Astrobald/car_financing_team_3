@@ -5,13 +5,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
 
 public class Main extends JFrame {
+
     private CardLayout cardLayout = new CardLayout();
     private JPanel cardPanel = new JPanel(cardLayout);
     private JPanel mainPanel = new JPanel(new FlowLayout());
     private LoginView loginView = new LoginView();
     private RegisterView registerView = new RegisterView();
+
 
     public Main() {
         setTitle("Financement Automobile XYZ");
@@ -42,6 +45,7 @@ public class Main extends JFrame {
                 cardLayout.show(cardPanel, "Register");
             }
         });
+
     }
 
     public static void main(String[] args) {
